@@ -1,5 +1,7 @@
 # whyhot
 
+![whyhot macOS terminal UI](screenshots/mac_01.png)
+
 `whyhot` is a deterministic macOS terminal diagnostic that answers “why is my Mac hot?” It combines process activity with macOS power, thermal, battery, display, and uptime signals. Its animated flame changes colour with the diagnosis and intensity with CPU load.
 
 ![Rust 1.85+](https://img.shields.io/badge/Rust-1.85%2B-orange)
