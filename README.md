@@ -67,6 +67,10 @@ cargo clippy --all-targets -- -D warnings
 cargo fmt --check
 ```
 
+## Releasing
+
+Update the version and changelog, run the development checks plus `cargo package --locked`, then publish a GitHub release. Maintainers can publish the crate locally with `cargo publish --locked` or run the manual **Publish to crates.io** workflow after configuring its `CARGO_REGISTRY_TOKEN` environment secret.
+
 ## License
 
 MIT
