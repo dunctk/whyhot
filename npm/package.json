@@ -1,0 +1,45 @@
+{
+  "name": "whyhot",
+  "version": "0.1.0",
+  "description": "A deterministic terminal diagnostic that explains why your Mac is hot",
+  "license": "MIT",
+  "author": "Duncan Trevithick",
+  "homepage": "https://github.com/dunctk/whyhot#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dunctk/whyhot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dunctk/whyhot/issues"
+  },
+  "keywords": [
+    "macos",
+    "thermal",
+    "diagnostics",
+    "tui",
+    "cpu"
+  ],
+  "type": "module",
+  "bin": {
+    "whyhot": "bin/whyhot.js"
+  },
+  "files": [
+    "bin/",
+    "native/",
+    "LICENSE",
+    "README.md"
+  ],
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64",
+    "x64"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
+}

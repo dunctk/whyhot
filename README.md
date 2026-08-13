@@ -6,22 +6,44 @@
 
 ## Install
 
-From crates.io:
+`whyhot` supports Apple Silicon and Intel Macs. Choose whichever installer you already use.
+
+### Run with npx
+
+No permanent install and no Rust toolchain required:
+
+```sh
+npx whyhot
+```
+
+### Install with npm
+
+```sh
+npm install --global whyhot
+whyhot
+```
+
+The npm package bundles both native macOS binaries. It has no runtime dependencies, install scripts, telemetry, or binary downloads.
+
+### Install with Cargo
 
 ```sh
 cargo install whyhot --locked
+whyhot
 ```
 
-From a checkout:
+This builds from source and requires a Rust toolchain.
 
-```sh
-cargo install --path . --locked
-```
-
-From Git:
+### Install from Git
 
 ```sh
 cargo install --git https://github.com/dunctk/whyhot --locked
+```
+
+### Install from a local checkout
+
+```sh
+cargo install --path . --locked
 ```
 
 ## Use
@@ -69,7 +91,7 @@ cargo fmt --check
 
 ## Releasing
 
-Update the version and changelog, run the development checks plus `cargo package --locked`, then publish a GitHub release. Maintainers can publish the crate locally with `cargo publish --locked` or run the manual **Publish to crates.io** workflow after configuring its `CARGO_REGISTRY_TOKEN` environment secret.
+Update the Rust and npm package versions together, run the development checks plus `cargo package --locked`, then publish a GitHub release. Maintainers can publish through the manual **Publish to crates.io** workflow and the OIDC-authenticated **Publish to npm** workflow.
 
 ## License
 

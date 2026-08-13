@@ -23,3 +23,21 @@ jobs:
       - run: cargo test --locked
       - run: cargo install --path . --locked
 
+  npm-package:
+    name: Test npm package
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-apple-darwin,x86_64-apple-darwin
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - uses: Swatinem/rust-cache@v2
+      - run: ./scripts/build-npm.sh
+      - run: npm test
+        working-directory: npm
+      - run: npm pack --dry-run
+        working-directory: npm
