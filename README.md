@@ -6,34 +6,44 @@
 
 ## Install
 
-From crates.io:
+`whyhot` supports Apple Silicon and Intel Macs. Choose whichever installer you already use.
 
-```sh
-cargo install whyhot --locked
-```
+### Run with npx
 
-Run once through npm without installing Rust:
+No permanent install and no Rust toolchain required:
 
 ```sh
 npx whyhot
 ```
 
-Or install through npm globally:
+### Install with npm
 
 ```sh
 npm install --global whyhot
+whyhot
 ```
 
-From a checkout:
+The npm package bundles both native macOS binaries. It has no runtime dependencies, install scripts, telemetry, or binary downloads.
+
+### Install with Cargo
 
 ```sh
-cargo install --path . --locked
+cargo install whyhot --locked
+whyhot
 ```
 
-From Git:
+This builds from source and requires a Rust toolchain.
+
+### Install from Git
 
 ```sh
 cargo install --git https://github.com/dunctk/whyhot --locked
+```
+
+### Install from a local checkout
+
+```sh
+cargo install --path . --locked
 ```
 
 ## Use
