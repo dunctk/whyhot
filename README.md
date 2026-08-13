@@ -81,7 +81,7 @@ cargo fmt --check
 
 ## Releasing
 
-Update the Rust and npm package versions together, run the development checks plus `cargo package --locked`, then publish a GitHub release. Maintainers can publish through the manual **Publish to crates.io** and **Publish to npm** workflows after configuring their environment secrets.
+Update the Rust and npm package versions together, run the development checks plus `cargo package --locked`, then publish a GitHub release. Maintainers can publish through the manual **Publish to crates.io** workflow and the OIDC-authenticated **Publish to npm** workflow.
 
 ## License
 
