@@ -12,6 +12,18 @@ From crates.io:
 cargo install whyhot --locked
 ```
 
+Run once through npm without installing Rust:
+
+```sh
+npx whyhot
+```
+
+Or install through npm globally:
+
+```sh
+npm install --global whyhot
+```
+
 From a checkout:
 
 ```sh
@@ -69,7 +81,7 @@ cargo fmt --check
 
 ## Releasing
 
-Update the version and changelog, run the development checks plus `cargo package --locked`, then publish a GitHub release. Maintainers can publish the crate locally with `cargo publish --locked` or run the manual **Publish to crates.io** workflow after configuring its `CARGO_REGISTRY_TOKEN` environment secret.
+Update the Rust and npm package versions together, run the development checks plus `cargo package --locked`, then publish a GitHub release. Maintainers can publish through the manual **Publish to crates.io** and **Publish to npm** workflows after configuring their environment secrets.
 
 ## License
 
